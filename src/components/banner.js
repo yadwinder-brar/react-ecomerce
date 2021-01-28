@@ -1,10 +1,8 @@
 import React from 'react'
-import {Card,Button,Dropdown,DropdownButton} from 'react-bootstrap';
-import { base_url } from './config';
 import img from '../assets/images/banerfk.jpg';
 import img2 from '../assets/images/banner3.jpg';
 import img1 from '../assets/images/main-baner.jpg';
-export default class Baner extends React.Component {
+export default class Banner extends React.Component {
   
     render(){
         return (
@@ -13,17 +11,17 @@ export default class Baner extends React.Component {
                         <div className="row">
                             <div className="col-4">
                                 <div className="b-img">
-                                    <img src={img} className="w-100 round"/>
+                                    <img src={img} className="w-100 round" alt=""/>
                                 </div>
                             </div>
                             <div className="col-4">
                                 <div className="b-img">
-                                    <img src={img1} className="w-100 round"/>
+                                    <img src={img1} className="w-100 round" alt=""/>
                                 </div>
                             </div>
                             <div className="col-4">
                                 <div className="b-img">
-                                    <img src={img2} className="w-100 round"/>
+                                    <img src={img2} className="w-100 round" alt=""/>
                                 </div>
                             </div>
                         </div>

@@ -46,6 +46,13 @@ border-radius: 50%;
 .section-title {
   color: #212529;
 }
+ul.show {
+  position: absolute!important;
+  background: #fff!important;
+  z-index: 1!important;
+  width: 150px!important;
+  margin-left: -50px!important;
+}
 /* ================== SECTIONS =================== */
 /* ================== header main ==================  */
 
@@ -362,13 +369,7 @@ ul.ul-sidebar.catgory-list {
 /* ul.show {
   padding-left: 20px;
 } */
-ul.show {
-  position: absolute!important;
-  background: #fff!important;
-  z-index: 1!important;
-  width: 150px!important;
-  margin-left: -50px!important;
-}
+
 .ghi{
 z-index: 12;
 }
