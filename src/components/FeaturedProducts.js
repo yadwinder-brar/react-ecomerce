@@ -45,18 +45,19 @@ export default class FeaturedProducts extends React.Component {
                                     <div className="row">
                                     {this.state.products.map((product, i) => {
                                         return<div className="col-sm-6 col-md-4 col-lg-2">        
-                                                    <div className="card my-3">
-                                                        <div className="card-body">
-                                                        <img src={img2} alt="discount image" className="d-img"/>
-                                                            <span className="text-white position-absolute cbn">10% off</span>
-                                                            <img src={image_url + JSON.parse(product.image)[0]} alt="product image" className="p-img  w-100 rounded-circle"/>
+                                                    <div className="card mb-3">
+                                                    <div className="card-header my-1">
+
+                                                    </div>
+                                                        <div className="card-body text-center">
+                                                        
+                                                        {/* <img src={img2} alt="discount image" className="d-img"/>
+                                                             <span className="text-white position-absolute cbn">10% off</span> */}
+                                                            <img src={image_url + JSON.parse(product.image)[0]} alt="product image" className="p-img mx-auto img-fluid"/>
                                                         </div>
-                                                        <div className="card-footer d-flex">
-                                                            <div className="footer-left w-50">
-                                                                <span className="prouduct-price"></span>
-                                                            </div>
-                                                            <div className="footer-right w-50 text-right text-right">
-                                                            {product.product_name}
+                                                        <div className="card-footer">
+                                                            <div className="footer-top text-center w-75 mx-auto">
+                                                                {product.product_name}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -76,11 +77,11 @@ export default class FeaturedProducts extends React.Component {
                                     </div>
                                     <div className="row">
                                         <div className="col-sm-6 col-md-4 col-lg-2">        
-                                            <div className="card my-3">
+                                            <div className="card mb-3">
                                                 <div className="card-body">
                                                 <img src={img2} alt="discount image" className="d-img"/>
                                                     <span className="text-white position-absolute cbn">10% off</span>
-                                                    <img src={img1} alt="product image" className="p-img  w-100"/>
+                                                    <img src={img1} alt="product image" className="p-img"/>
                                                 </div>
                                                 <div className="card-footer d-flex">
                                                     <div className="footer-left w-50">
@@ -93,11 +94,11 @@ export default class FeaturedProducts extends React.Component {
                                             </div>
                                         </div>
                                         <div className="col-sm-6 col-md-4 col-lg-2">           
-                                            <div className="card my-3">
+                                            <div className="card mb-3">
                                                 <div className="card-body">
                                                     <img src={img2} alt="discount image" className="d-img"/>
                                                     <span className="text-white position-absolute cbn">10% off</span>
-                                                    <img src={img1} alt="product image" className="p-img  w-100"/>
+                                                    <img src={img1} alt="product image" className="p-img"/>
                                                     
                                                 </div>
                                                 <div className="card-footer d-flex">
@@ -111,9 +112,9 @@ export default class FeaturedProducts extends React.Component {
                                             </div>
                                         </div>
                                         <div className="col-sm-6 col-md-4 col-lg-2">       
-                                            <div className="card my-3">
+                                            <div className="card mb-3">
                                                 <div className="card-body">
-                                                    <img src={img1} alt="product image" className="p-img  w-100"/>
+                                                    <img src={img1} alt="product image" className="p-img"/>
                                                 </div>
                                                 <div className="card-footer d-flex">
                                                     <div className="footer-left w-50">
@@ -126,9 +127,9 @@ export default class FeaturedProducts extends React.Component {
                                             </div>
                                         </div>
                                         <div className="col-sm-6 col-md-4 col-lg-2">       
-                                            <div className="card my-3">
+                                            <div className="card mb-3">
                                                 <div className="card-body">
-                                                    <img src={img1} alt="product image" className="p-img  w-100"/>
+                                                    <img src={img1} alt="product image" className="p-img"/>
                                                 </div>
                                                 <div className="card-footer d-flex">
                                                     <div className="footer-left w-50">
@@ -141,9 +142,9 @@ export default class FeaturedProducts extends React.Component {
                                             </div>
                                         </div>
                                         <div className="col-sm-6 col-md-4 col-lg-2">       
-                                            <div className="card my-3">
+                                            <div className="card mb-3">
                                                 <div className="card-body">
-                                                    <img src={img1} alt="product image" className="p-img  w-100"/>
+                                                    <img src={img1} alt="product image" className="p-img"/>
                                                 </div>
                                                 <div className="card-footer d-flex">
                                                     <div className="footer-left w-50">
@@ -156,9 +157,9 @@ export default class FeaturedProducts extends React.Component {
                                             </div>
                                         </div>
                                         <div className="col-sm-6 col-md-4 col-lg-2">       
-                                            <div className="card my-3">
+                                            <div className="card mb-3">
                                                 <div className="card-body">
-                                                    <img src={img1} alt="product image" className="p-img  w-100"/>
+                                                    <img src={img1} alt="product image" className="p-img"/>
                                                 </div>
                                                 <div className="card-footer d-flex">
                                                     <div className="footer-left w-50">
