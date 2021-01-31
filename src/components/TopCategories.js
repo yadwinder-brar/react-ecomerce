@@ -30,7 +30,7 @@ export default class TopCategories extends React.Component {
     render(){
         // const { activeLink } = this.state;
         return (
-                <div className="sidebar-top">
+                <div className="sidebar-top BB">
                     <div className="container">
                         <div className="row">
                             <div className="col-12">

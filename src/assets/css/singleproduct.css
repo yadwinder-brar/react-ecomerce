@@ -1,0 +1,61 @@
+.main-outer {
+    background: #f1f3f6;
+}
+
+
+.singlepro-main-outer{
+background-color: #FFFFFF;
+padding: 16px;
+}
+.side-img{
+ width: 68px;
+ height: 74px;
+}
+.top-img-1{
+    background: url(../images/singlepro1.jpeg) no-repeat center ;
+}
+.top-img-2{
+    background: url(../images/singlepro2.jpeg) no-repeat center ;
+}
+.top-img-3{
+    background: url(../images/singlepro3.jpeg) no-repeat center ;
+}
+.top-img-4{
+    background: url(../images/singlepro4.jpeg) no-repeat center ;
+}
+.top-img-5{
+    background: url(../images/singlepro5.jpeg) no-repeat center ;
+}
+.top-img-6{
+    background: url(../images/singlepro6.jpeg) no-repeat center ;
+}
+/* right side css start */
+.brand-name {
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+span.shoes-type {
+    font-size: 22px;
+    font-weight: 400;
+    color: #000;
+}
+span.price-top-text {
+    margin: 6px 0 -4px;
+    font-size: 15px;
+    font-weight: 600;
+}
+span.price-number {
+    font-size: 28px;
+    font-weight: 600;
+}
+del.old-price {
+    font-size: 17px;
+    padding-left: 15px;
+}
+span.off-on-price {
+    font-weight: 700;
+    padding-left: 14px;
+}
+
+
+/* right side css end */

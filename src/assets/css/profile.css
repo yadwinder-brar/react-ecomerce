@@ -1,0 +1,246 @@
+:root{
+    --main-color:#d62936;
+    --main-font-color:#45a18e;
+    --main-hover-color:red;
+    --main-body-color:#000;
+    --main-header-color:#191919;
+  }
+
+.b-shadow {
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 8%);
+}
+.BB {
+    border-bottom: 1px solid #f0f0f0;
+}
+.PK {
+    float: right;
+    padding: 0 20px 0 5px;
+    color: var(--main-color);
+    font-weight: 500;
+}
+.main-profile {
+    background-color: #f1f3f6;
+    min-height: 100vh;
+}
+.profile-inner {
+    padding: 15px;
+}
+span.user-name {
+    vertical-align: middle;
+    font-size: 27px;
+    font-weight: 500;
+}
+span.order-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+.HQ {
+    width: 14px;
+    height: 14px;
+    transform: rotate(180deg);
+}
+.order-icon {
+    margin-top: 1px;
+    float: right;
+}
+span.acc-text {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+span.acc-icon {
+    font-size: 20px;
+}
+.acc__2nd {
+    font-size: 14px;
+    padding: 12px 5px 12px 66px;
+    cursor: pointer;
+}
+.acc__2nd:hover {
+color:var(--main-color) !important;
+}
+
+/*profile-right css start */
+.col-8{
+    border-bottom: none;
+}
+.profile-right-main {
+    min-height: 863px;
+}
+.inner-1st {
+    padding: 24px 32px 0;
+}
+.top-info-main {
+    padding-bottom: 56px;
+}
+.top-info,._2GZbEx{
+    padding-bottom: 24px;
+}
+.p-info {
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 24px;
+}
+.info-edit{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--main-color);
+    cursor: pointer;
+}
+._1TlPi6,._2509-j {
+    padding-bottom: 2px;
+}
+._1TlPi6 ._1YVqbV,._2509-j ._1tli27 {
+    width: 270px;
+    padding-right: 12px;
+}
+._1Jqgld {
+    position: relative;
+    margin-bottom: 10px;
+}
+._1w3ZZo:disabled {
+    background-color: #fafafa;
+    cursor: not-allowed;
+}
+._2mFmU7 {
+    height: 50px;
+}
+
+._1w3ZZo {
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    border-radius: 2px;
+    padding: 20px 16px 0 13px;
+    box-shadow: none;
+}
+._1YmvCG {
+    padding: 16px;
+    color: #878787;
+    margin-left: 14px;
+}
+._1509Hs {
+    font-size: 12px;
+    padding: 12px 0;
+    font-weight: 600;
+}
+._2fnqkz {
+    font-size: 16px;
+}
+._2jIO64 {
+    display: inline-block;
+    margin-left: 18px;
+    width: calc(100% - 34px);
+}
+._2LcXZ- {
+    color: #878787!important;
+    cursor: not-allowed;
+}
+._3iI7Qn {
+    border-bottom: none;
+    display: inline-block;
+    margin-right: 32px;
+}
+._1XFPmK {
+    display: inline-block;
+    border: 2px solid #979797;
+    border-radius: 100%;
+    height: 16px;
+    width: 16px;
+    position: relative;
+    vertical-align: top;
+    margin-top: 3px;
+    cursor: pointer;
+}
+._3iI7Qn ._1XFPmK {
+    margin-top: 2px;
+    margin-left: 0;
+}
+._1XFPmK:before {
+    content: "";
+    border-radius: 100%;
+    height: 8px;
+    width: 8px;
+    margin: auto;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+._3DAmyP {
+    visibility: hidden;
+    position: absolute;
+}
+._3iI7Qn ._1XFPmK {
+    margin-top: 5px;
+    margin-left: 0;
+}
+._3iI7Qn ._2jIO64 {
+    margin-left: 12px;
+    width: auto;
+}
+/* save button css */
+._2KpZ6l {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: box-shadow .2s ease;
+    vertical-align: super;
+    background: var(--main-color);
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+    border: 1px solid #e0e0e0;
+}
+._1TlPi6 ._3eVCfA {
+    background: var(--main-color);
+    width: 130px;
+    height: 48px;
+    padding: 14px;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 16px;
+    box-shadow: none;
+}
+button._2KpZ6l._3eVCfA {
+    position: absolute;
+    top: 74px;
+    right: 34px;
+}
+.r_code{
+    font-size: 18px;
+    font-weight: 500;
+
+}
+/* button top-end */
+
+/* form2nd css start */
+._30ILIt {
+    padding-bottom: 46px;
+}
+._2GZbEx ._3memBI, ._2GZbEx .bgOhjx {
+    padding-right: 24px;
+}
+._2GZbEx .bgOhjx {
+    font-size: 18px;
+    font-weight: 500;
+}
+._3sranR {
+    padding: 16px;
+    color: #878787;
+}
+/* 2nd button */
+._2509-j ._25vsmg._1-iOO7 {
+    width: 130px;
+}
+._2509-j ._25vsmg {
+    background: var(--main-color);
+    height: 48px;
+    padding: 14px;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 16px;
+    box-shadow: none;
+}

@@ -2,102 +2,254 @@ import React,{useState} from 'react'
 import { Button,Modal,Form} from 'react-bootstrap';
 import { base_url } from './config';
 import { Link } from 'react-router-dom'
+import {Dropdown} from 'react-bootstrap';
+export default function Login() {
 
-var axios = require('axios');
+
+const token = localStorage.getItem("token")
+const userEmail = localStorage.getItem("userEmail")
+
+let loggedIn = true
+if(token == null){
+loggedIn = false
+}
+console.log('token' , token)
+console.log('loggedIn' , loggedIn)
 
 
-export default function Login({ setToken }) {
-    const [username, setUserName] = useState();
-    const [password, setPassword] = useState();
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    const [ErrorMessage, SetErrorMessage] = useState('');
-    function submitForm(e){
-        e.preventDefault()   
-        const params = {
-            email : e.target.email.value,
-            password : e.target.password.value,
-            device_name : 'web'
-        }
-        var data = JSON.stringify(params);
+const [phone, setPhone] = useState();
+const [otp, setOtp] = useState();
+const [show, setShow] = useState(false);
 
-            var config = {
-                method: 'post',
-                url: base_url + 'api/v1/signin',
-                    headers: { 
-                        'Content-Type': 'application/json'
-                    },
-                    data : data
-            };
+const [regshow, setregShow] = useState(false);
+const [regemailError, setregEmailError] = useState('');
+const [regPhoneError, setregPhoneNoError] = useState('');
 
-            axios(config)
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log('this is error',JSON.stringify(error.messages));
-            });
-    }
-    return(
-      <>
-             <Link variant="danger" onClick={handleShow} className="text-white header__login">
-                login
-            </Link>
-            
-            <Modal show={show} onHide={handleClose} style={{marginTop : '90px'}}>
-                <Modal.Body>
-                <button class="cls-btn top__btn">✕</button>
-                <div className="main-login d-flex">
-                    <div className="left-login text-white">
-                        <h3 className="text-uppercase top-heading">login</h3>
-                        <p className="left-login-text mt-5">
-                            <span className="left-text pt-3">Get access to your Orders, Wishlist and Recommendations</span>
-                        </p>
+const handleClose = () => setShow(false);
+const handleShow = () => setShow(true);
 
-                    </div>
-                    <div className="right-login">
-                    <Form onSubmit={submitForm}>    
-                        <h6 class="text-danger text-center">{ErrorMessage}</h6>
-                        <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control type="text" name="email"  className="text__height"/>
-                            <Form.Text className="text-muted">
-                            </Form.Text>
-                        </Form.Group>
-                        <Form.Group controlId="formBasicEmail" className="position-relative">
-                            <Form.Label>Passowrd</Form.Label>
-                            <Form.Control type="password" name="password" className="text__height" />
-                            <a class="forget pass" tabindex="-1"><span>Forgot?</span></a>
-                            <Form.Text className="text-muted">
-                            </Form.Text>  
-                        </Form.Group>
-                        <Form.Group>
-                        <span class="form-text">By continuing, you agree to ZRROH CRAFT's 
-                            <a class="text-danger term-text" target="_blank" href="">Terms of Use</a> 
-                            and <a class="text-danger term-text" target="_blank" href="">
-                            Privacy Policy</a>
-                        </span>
-                        </Form.Group>
-                        <Form.Group>
-                            <button className="btn btn-danger text-uppercase w-100">login</button>
-                        </Form.Group>
-                        <Form.Group className="w-100 text-center">
-                            <span className="text-uppercase">or</span>  
-                        </Form.Group>
-                        
-                        <Form.Group>
-                            <button className="btn btn__lower text-danger text-capitalize w-100">request <span className="text-uppercase">otp</span></button>
-                        </Form.Group>
-                        <Form.Group className="text-center mx-auto">
-                        <a class="new-user text-danger" href="">New to ZRROH CRAFT Create an account</a>
-                        </Form.Group>                         
-                    </Form>
-                    </div>
-                </div>
-                </Modal.Body>
-            
-            </Modal>
-      </>
-    )
+const [OtpScreen, UpdateOtpScreen] = useState('_210lwq d-none');
+const [LoginScreen, UpdateLoginScreen] = useState('');
+
+const handleRegShow = () => {
+setShow(false);
+setregShow(true);
+}
+const GenerateOtp = () => {
+fetch(base_url + 'api/v1/sendOtp', {
+headers: {
+'Accept': 'application/json',
+'Content-Type': 'application/json'
+},
+method: 'POST',
+body: JSON.stringify({mobile : phone}),
+}).then(response => response.json()).then(response => {
+console.log("response=============",response);
+
+if(response.status == 200){
+SetErrorMessage(response.message)
+setregPhoneNoError('');
+UpdateOtpScreen('_210lwq')
+UpdateLoginScreen('d-none')
+}else{
+console.log(response)
+if(response.errors.mobile[0])
+setregPhoneNoError(response.errors.mobile[0])
+
+SetErrorMessage(response.message)
+}
+})
+.catch(err => console.log(err))
+}
+const handleRegClose = () => setregShow(false);
+const [ErrorMessage, SetErrorMessage] = useState('');
+function RegisterForm(e){
+e.preventDefault()
+const params = {
+email : e.target.email.value,
+mobile : e.target.phone.value,
+}
+fetch(base_url + 'api/v1/signup', {
+headers: {
+'Accept': 'application/json',
+'Content-Type': 'application/json'
+},
+method: 'POST',
+body: JSON.stringify(params),
+}).then(response => response.json()).then(response => { console.log("response=============",response);
+
+if(response.status == 200){
+SetErrorMessage(response.message)
+setShow(true);
+setregShow(false);
+setPhone(params.mobile)
+// GenerateOtp()
+}else{
+console.log(response)
+SetErrorMessage(response.message)
+if(response.errors.email[0]){
+setregEmailError(response.errors.email[0])
+}
+if(response.errors.mobile[0]){
+setregPhoneNoError(response.errors.mobile[0])
+}
+}
+})
+.catch(err => console.log(err))
+}
+function FormSubmit(e){
+console.log('submitted')
+e.preventDefault();
+return;
+}
+function logout(){
+localStorage.removeItem("token");
+window.location.reload()
+}
+function Login(){
+const params = {
+mobile : phone,
+otp : otp,
+device_name : 'web'
+}
+
+fetch(base_url + 'api/v1/signin', {
+headers: {
+'Accept': 'application/json',
+'Content-Type': 'application/json'
+},
+method: 'POST',
+body: JSON.stringify(params),
+}).then(response => response.json()).then(response => { console.log("response=============",response);
+
+if(response.status == 200){
+
+localStorage.setItem("token",response.token)
+localStorage.setItem("userEmail",response.userDetails.email)
+window.location.reload()
+
+}else{
+if(response.status === 422){
+console.log(response)
+SetErrorMessage(response.message)
+if(response.errors.otp){
+SetErrorMessage(response.errors.otp[0])
+}
+}
+}
+})
+.catch(err => console.log(err))
+}
+if(loggedIn == true){
+return <Dropdown>
+<Dropdown.Toggle variant="danger" id="dropdown-basic" className="d__button">
+{userEmail}
+</Dropdown.Toggle>
+
+<Dropdown.Menu>
+<Dropdown.Item href="#">Offers</Dropdown.Item>
+<Dropdown.Item href="#">Orders</Dropdown.Item>
+<Dropdown.Item onClick={logout}>Logout</Dropdown.Item>
+</Dropdown.Menu>
+</Dropdown>
+}
+return(
+<>
+<Link variant="danger" onClick={handleShow} className="text-white header__login">
+login
+</Link>
+
+<Modal show={show} onHide={handleClose} style={{marginTop : '90px'}}>
+<Modal.Body>
+<button class="cls-btn top__btn" onClick={handleClose}>✕</button>
+<div className="main-login d-flex">
+<div className="left-login text-white">
+<h3 className="text-uppercase top-heading">login</h3>
+<p className="left-login-text mt-5">
+<span className="left-text pt-3">Get access to your Orders, Wishlist and Recommendations</span>
+</p>
+
+</div>
+<div className="right-login">
+<h6 class="text-danger text-center">{ErrorMessage}</h6>
+<Form onSubmit={FormSubmit} className={LoginScreen}>
+
+<Form.Group controlId="formBasicEmail">
+<Form.Label>Phone</Form.Label>
+<Form.Control type="text" name="phone" value={phone} onChange={event => setPhone(event.target.value)} className="text__height"/>
+<Form.Text className="text-danger">{regPhoneError}</Form.Text>
+</Form.Group>
+<Form.Group>
+<span class="form-text">By continuing, you agree to ZRROH CRAFT's
+<a class="text-danger term-text" target="_blank" href="">Terms of Use</a>
+and <a class="text-danger term-text" target="_blank" href="">
+Privacy Policy</a>
+</span>
+</Form.Group>
+
+<Form.Group>
+<button className="btn btn__lower text-danger text-capitalize w-100" type="button" onClick={GenerateOtp}>request <span className="text-uppercase">otp</span></button>
+</Form.Group>
+<Form.Group className="text-center mx-auto">
+<span class="new-user text-danger" onClick={handleRegShow}>New to ZRROH CRAFT Create an account
+</span>
+</Form.Group>
+</Form>
+<div className={OtpScreen}>
+<div>Please enter the OTP sent to</div>
+<div>
+<span class="_2eL2SZ"></span>
+<button type="button" class="_14Me7y w-75 btn btn-danger mt-3" onClick={GenerateOtp}>Change</button>
+</div>
+<Form onSubmit={FormSubmit}>
+<div class="HSKgdN">
+<input type="number" name="otp" onChange={event => setOtp(event.target.value)} class="form-control"/>
+</div>
+<button type="button" class="_2KpZ6l 14EHzR 3dESVI btn btn-danger w-75 mt-3" onClick={Login}>Verify</button>
+</Form>
+<div class="uhuX5T mt-3">Not received your code? <span class="_3Vt3BV r-code">Resend code</span></div>
+</div>
+</div>
+
+</div>
+</Modal.Body>
+
+</Modal>
+<Modal show={regshow} onHide={handleRegClose} style={{marginTop : '90px'}}>
+<Modal.Body>
+<button class="cls-btn top__btn" onClick={handleRegClose}>✕</button>
+<div className="main-login d-flex">
+<div className="left-login text-white">
+<h3 className="text-uppercase top-heading">Register</h3>
+<p className="left-login-text mt-5">
+<span className="left-text pt-3">Get access to your Orders, Wishlist and Recommendations</span>
+</p>
+
+</div>
+<div className="right-login">
+<Form onSubmit={RegisterForm}>
+<h6 class="text-danger text-center">{ErrorMessage}</h6>
+<Form.Group controlId="formBasicEmail">
+<Form.Label>Email</Form.Label>
+<Form.Control type="text" name="email" className="text__height"/>
+<Form.Text className="text-danger">{regemailError}
+</Form.Text>
+</Form.Group>
+<Form.Group controlId="formBasicEmail" className="position-relative">
+<Form.Label>Phone</Form.Label>
+<Form.Control type="number" name="phone" className="text__height" />
+<Form.Text className="text-danger">{regPhoneError}
+</Form.Text>
+</Form.Group>
+<Form.Group>
+<button className="btn btn-danger text-uppercase w-100">Register</button>
+</Form.Group>
+</Form>
+</div>
+</div>
+</Modal.Body>
+
+</Modal>
+</>
+)
 }

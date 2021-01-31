@@ -32,7 +32,7 @@ a:hover {
   transform: scaleX(1);
 }
 .btn__addcart{
-  padding:5px 9px;
+  padding:5px 2px;
   }
 .header__icon{
 width: 48px;
@@ -57,7 +57,7 @@ ul.show {
 /* ================== header main ==================  */
 
 .cc {
-  animation: color-change 2s infinite;
+  animation: color-change 1.5s infinite;
 }
 
 @keyframes color-change {
@@ -71,7 +71,7 @@ ul.show {
   animation: beat .25s infinite alternate;
   }
   @keyframes beat{
-    to { transform: scale(1.4); }
+    to { transform: scale(1.1); }
   }
 /* logo__img */
 /* header sticky start */
@@ -89,11 +89,8 @@ header.section-header {
 .d__button,.d__button:hover {
   justify-content: center;
   background-color: var(--main-color);
-  /* background-image: linear-gradient(-60deg, rgb(52, 143, 80), rgb(86, 180, 211)); */
   border-radius: 6px;
-  box-shadow: rgba(52, 143, 80, 0.4) 0px 0px 0px;
   color: #fff;
-  margin-top: 24px;
 }
 button.control-arrow.control-next,button.control-arrow.control-prev {
   background: black!important;
@@ -131,6 +128,7 @@ form.search {
 .btn:hover {
   color: #ffffff;
 }
+
 li.nav-text {
   padding: 0 12px;
   font-size: 20px;
@@ -151,17 +149,18 @@ li.nav-cart {
   font-size: 20px;
   color: white;
   list-style: none;
-  margin-left: 10px;
+  margin-left: 1px;
   position: relative;
+  cursor: pointer;
 }
 span.cart-count {
-  top: -13px;
-  left: 2px;
-  font-size: 15px;
+  top: -10px;
+  left: 2.5px;
+  font-size: 12px;
   font-weight: 500;
   background: var(--main-color);
-  padding: 0px 5px;
-  border-radius: 50%;
+  padding: 1px 7px;
+  border-radius: 45%;
 }
 span.header-cart-text {
   font-size: 19px;
@@ -175,13 +174,6 @@ img.slider__img{
 .round {
   border-radius: 1rem!important;
 }
-/* button.xyz,button.xyz:hover {
-  color: black;
-  font-weight: 500;
-  font-size: 18px;
-  background: transparent;
-  border:none;
-} */
 span.change-text {
   font-size: 50px;
 }
@@ -192,9 +184,6 @@ span.change-text {
   width: 60px;
   height: 60px;
 }
-/* .sidebar-top {
-  padding-top: 25px;
-} */
 /* .carousel  */
 li.catgory-list {
   list-style: none;
@@ -219,12 +208,6 @@ li.sub-cat:hover {
   margin-left: 1px;
   transition: .75s ease-in-out;
 }
-/* span.li-icon {
-  font-size: 10px;
-  position: absolute;
-  right: 9px;
-  top: 35%;
-} */
 span.li-icon {
   font-size: 12px;
   margin-top: 8px;
@@ -274,7 +257,7 @@ span.cbn {
 .card-body .cbn{
   animation: ccc 5s infinite;
 }
-.col-4,.col-8{
+.col-8{
   border-bottom: .5px solid gray;
 }
 @keyframes ccc {
@@ -340,100 +323,187 @@ footer.section-footer {
   font-weight: 400;
 }
 
-/* login modal css */
-.modal-dialog {
-  max-width: 650px;
-  margin:auto;
-}
-.modal-body{
-  padding:0;
-}
-.cls-btn {
-  display: inline-block;
-  border-radius: 2px;
-  font-weight: 500;
-  transition: box-shadow .2s ease;
-  outline: none;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
-}
-.top__btn {
-  position: absolute;
-  right: -38px;
-  top: 0;
-  padding: 0;
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 32px;
-  line-height: 1;
-  vertical-align: top;
-}
+/* login modal css start */
+  .modal-dialog {
+    max-width: 650px;
+    margin:auto;
+  }
+  .modal-body{
+    padding:0;
+  }
+  .cls-btn {
+    display: inline-block;
+    border-radius: 2px;
+    font-weight: 500;
+    transition: box-shadow .2s ease;
+    outline: none;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+  }
+  .top__btn {
+    position: absolute;
+    right: -38px;
+    top: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: top;
+  }
 
-.left-login {
-  width: 40%;
-  background-color: var(--main-color);
-  padding: 40px 33px;
-  background-image:url( ../images/loginbg.png);
-  background-repeat: no-repeat;
-  background-position: center 85%;
-  min-height: 500px;
+  .left-login {
+    width: 40%;
+    background-color: var(--main-color);
+    padding: 40px 33px;
+    background-image:url( ../images/loginbg.png);
+    background-repeat: no-repeat;
+    background-position: center 85%;
+    min-height: 500px;
+  }
+  span.left-text {
+    line-height: 35px;
+    font-size: 17px;
+    font-weight: 100;
+    font-family: arial,sans-serif;
+    color: #caccce;
+  }
+  .text__height {
+    padding: 1px;
+    margin-top: -9px;
+    height: 26px;
+  }
+  .right-login{
+    width:60%;
+    padding: 56px 35px 16px;
+    position: relative;
+    background-color: #fff;
+  }
+  .forget{
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    color: var(--main-color)!important;
+  }
+  .pass {
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+    bottom: 0px;
+  }
+  span.form-text {
+    font-size: 12px;
+    line-height: 23px;
+    margin-top: 35px;
+  }
+  .btn__lower {
+    background: #fff;
+    box-shadow: 0px 0px 12px -7px;
+    border: none;
+  }
+  a.new-user {
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 38px;
+    font-weight: 500;
+  }
+  .form-control {
+    border:none;
+    border-radius:0;
+    border-bottom: .5px solid darkgray;
+  }
+  /*otp css start */
+  ._210lwq {
+    text-align: center;
+    font-size: 16px;
 }
-span.left-text {
-  line-height: 35px;
-  font-size: 17px;
-  font-weight: 100;
-  font-family: arial,sans-serif;
-  color: #caccce;
+._210lwq ._2eL2SZ {
+  margin-right: 10px;
 }
-.text__height {
-  padding: 1px;
-  margin-top: -9px;
-  height: 26px;
+._14Me7y {
+  color:#fff;
+  font-weight: 500;
 }
-.right-login{
-  width:60%;
-  padding: 56px 35px 16px;
+._210lwq .HSKgdN {
+  display: flex;
+  margin-top: 54px;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+._210lwq ._2EZ3Zp {
+  margin-right: 10px;
+  width: 28px;
+}
+.IiD88i {
   position: relative;
-  background-color: #fff;
+  margin-bottom: 34px;
+  font-size: 16px;
 }
-.forget{
-  font-weight: 500;
-  font-size: 15px;
-  cursor: pointer;
-  color: var(--main-color)!important;
+._210lwq ._1WRfas {
+  padding: 0;
+  font-size: 24px;
+  text-align: center;
+  box-shadow: none;
 }
-.pass {
-  position: absolute;
-  display: inline-block;
-  right: 0px;
-  bottom: 0px;
-}
-span.form-text {
-  font-size: 12px;
-  line-height: 23px;
-  margin-top: 35px;
-}
-.btn__lower {
+._2IX_2- {
+  padding: 8px 10px 10px 0;
+  width: 100%;
+  color: #000;
+  font-size: inherit;
   background: #fff;
-  box-shadow: 0px 0px 12px -7px;
   border: none;
+  border-bottom: 1px solid #e0e0e0;
 }
-a.new-user {
-  font-size: 12px;
+._36T8XR {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+._36T8XR:before {
+  left: 50%;
+  transform-origin: left;
+}
+._36T8XR:before {
+  left: 50%;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+._36T8XR:after, ._36T8XR:before {
+  content: "";
+  height: 1px;
+  width: 50%;
+  transform: scale(0);
+  bottom: 1px;
   position: absolute;
+  will-change: transform;
+  background: var(--main-color);
+  transition: transform .2s ease;
+}
+._36T8XR:after {
+  right: 50%;
+  -webkit-transform-origin: right;
+  transform-origin: right;
+}
+._1fqY3P {
+  color: #878787;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  pointer-events: none;
   left: 0;
-  right: 0;
-  bottom: 38px;
-  font-weight: 500;
-}
-.form-control {
-  border:none;
-  border-radius:0;
-  border-bottom: .5px solid darkgray;
+  top: 0;
+  transform: translateY(10px);
+  transition: transform .2s ease;
+  transition: transform .2s ease,-webkit-transform .2s ease;
+  will-change: transform;
+  transform-origin: left;
 }
 
+ /* otp css end */
 
-/* login modal css */
+/* login modal css end */
 
 
 /* animation add to cart */
@@ -448,9 +518,15 @@ a.new-user {
     top:-50px;
   }
 }
+/* animation add to cart end */
 
-/* Responsive start */
-/* Responsive start */
+/* -------product page css start---------- */
+
+
+
+/* -------product page css end---------- */
+/* -------------------------------Responsive start--------------------------------------- */
+/* -------------------------------Responsive start--------------------------------------- */
 @media only screen and (max-width: 1034px) {
   /* ul.header-text.d-flex.header-nav {
     margin-left: -27px;
@@ -467,9 +543,6 @@ ul.ul-sidebar.catgory-list {
 .ghi{
 z-index: 12;
 }
-/* .widget-header {
-  margin-top: 27px;
-} */
 .carousel .slide .legend1 {
   top: 7%;
   left: 6%;
@@ -483,6 +556,9 @@ span.change-text {
 .containers{
   max-width: 95%;
 }
+/* .sidebar-top{
+box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+} */
 /* li.ul-sidebar-item {
   min-width: 15%;  
 } */
