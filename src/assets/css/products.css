@@ -1,7 +1,118 @@
 .outer{
-    color:gray;
+    background-color:#eef0f3;
+    padding-bottom: 12px;
   }
+.main-filters{
+ box-shadow: 0 1px 8px 0 rgb(0 0 0 / 6%);
+}
  .filter-cat{
   padding: 16px;
   position:relative;
+  border-bottom: 1px solid #f0f0f0;
 }
+.filter__right{
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+span.filter-text {
+  font-size: 22px;
+  font-weight: 400;
+}
+.filter-cat-inner {
+  cursor: pointer;
+  margin: -16px;
+  padding: 16px;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+}
+.filter__text {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  display: inline-block;
+}
+.filter-name {
+  width: 95%;
+}
+.filter-icon {
+    display: inline-block;
+    cursor: pointer;
+    width: 6px;
+    height: 11px;
+    transform: rotate(-90deg);
+}
+.icon-fill {
+  fill: #878787;
+}
+.filter-head, .filter-inner-1st {
+  margin: 7px 0;
+}
+.filter-inner-2nd {
+  cursor: pointer;
+  padding: 3px 0;
+}
+.filter-inner-3rd {
+  width: 100%;
+}
+.fi3 {
+  display: inline-block;
+  /* width: 127px; */
+}
+.filter-inner-4th {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  padding: 3px 0;
+}
+.cbox-orignal {
+  /*  */
+  position: absolute;
+  top: 9px;
+  left: 0;
+}
+.c-box-show {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  visibility: hidden;
+  background-color: transparent;
+  border: 1.4px solid #c2c2c2;
+  border-radius: 1.5px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.filter-main-text {
+  vertical-align: middle;
+  padding-left: 11px;
+  color: #212121;
+  display: inline-block;
+  font-size:14px;
+  /* width: calc(100% - 25px); */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
+  cursor: pointer;
+}
+.color-chose {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: #000;
+  border-radius: 50%;
+  position: relative;
+  top: 3px;
+  left: 8px;
+}
+
+/* right side css */
+.products-right {
+  background: #eae8e8bf;
+  padding: 16px;
+}
+
+/* right side css end */

@@ -56,7 +56,7 @@ export default class TopCategories extends React.Component {
                                                 </span>
                                                 <ul className={this.state.activeLink == category.id ? 'collapse show' : 'collapse'} onMouseEnter={this.handleClick.bind(this, category)}>
                                                     {category.sub_categories.map((sub_category, i) => {
-                                                        return<li className="sub-cat text-capitalize">{sub_category.title.toUpperCase()} 
+                                                        return<li className="sub-cat text-capitalize">{sub_category.title.toUpperCase()}
                                                         </li>
                                                     })}
                                                 

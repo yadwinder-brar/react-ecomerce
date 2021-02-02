@@ -19,7 +19,7 @@ export default class MainRouting extends React.Component {
                     <div class="page-wrapper chiller-theme toggled">
                         <Header/>
                             <TopCategories/>
-                            <Slider/>
+                            {/* <Slider/> */}
                             <Switch>
                                 <Route exact path='/' component={Index}/>
                                 <Route exact path='/product' component={Product}/>
