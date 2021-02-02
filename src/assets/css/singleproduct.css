@@ -3,33 +3,46 @@
 }
 
 
-.singlepro-main-outer{
-background-color: #FFFFFF;
-padding: 16px;
+.singlepro-main-outer {
+    background-color: #FFF;
+    padding: 16px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 16%);
 }
 .side-img{
  width: 68px;
  height: 74px;
 }
+
 .top-img-1{
     background: url(../images/singlepro1.jpeg) no-repeat center ;
+    background-size: contain;
 }
 .top-img-2{
-    background: url(../images/singlepro2.jpeg) no-repeat center ;
+    background: url(../images/singlepro5.jpeg) no-repeat center ;
+    background-size: contain;
 }
 .top-img-3{
-    background: url(../images/singlepro3.jpeg) no-repeat center ;
+    
+    background: url(../images/singlepro4.jpeg) no-repeat center ;
+    background-size: contain;
 }
 .top-img-4{
-    background: url(../images/singlepro4.jpeg) no-repeat center ;
+    background: url(../images/singlepro3.jpeg) no-repeat center ;
+    background-size: contain;
 }
 .top-img-5{
-    background: url(../images/singlepro5.jpeg) no-repeat center ;
+    background: url(../images/singlepro2.jpeg) no-repeat center ;
+    background-size: contain;
 }
 .top-img-6{
     background: url(../images/singlepro6.jpeg) no-repeat center ;
+    background-size: contain;
 }
-/* right side css start */
+.full-img {
+    padding-top: 50%;
+}
+/* ----------------right side css--------------- */
+/* ----------------right side css start--------- */
 .brand-name {
     margin-top: 12px;
     margin-bottom: 0;
@@ -56,6 +69,52 @@ span.off-on-price {
     font-weight: 700;
     padding-left: 14px;
 }
-
+.color-name1,.color-name2,.color-name3,.color-name4 {
+    border: 1px solid;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #000000f0;
+}
+.color-name2 {
+    
+    background-color:red;
+}
+.color-name3 {
+    
+    background-color:brown;
+}
+.color-name4 {
+    
+    background-color:gray;
+}
 
 /* right side css end */
+/*------related pro slider css---------*/
+
+.related-product-inner{
+ box-shadow: 0 1px 3px 0 rgb(0 0 0 / 16%);
+}
+/*------related pro slider css---------*/
+
+/* zoom effect css */
+.img-zoom-lens {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    /*set the size of the lens:*/
+    width: 40px;
+    height: 40px;
+  }
+  
+  .img-zoom-result {
+    border: 1px solid #d4d4d4;
+    /*set the size of the result div:*/
+    width: 300px;
+    height: 300px;
+  }
+  .img-zoom-result{
+   position:absolute;
+   top:0;
+   right:0;
+  }
+/* zoom effect css end */

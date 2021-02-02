@@ -1,7 +1,7 @@
 import React from 'react'
 import {Dropdown} from 'react-bootstrap';
-import { base_url } from './config';
-import logo from '../assets/images/menu-top.png';
+import { base_url,image_url } from './config';
+import CatImage from '../assets/images/menu-top.png';
 export default class TopCategories extends React.Component {
     constructor() {
         super();
@@ -28,6 +28,12 @@ export default class TopCategories extends React.Component {
           .catch(err => console.log(err))
       }
     render(){
+        function get_image_url(url){
+            if(typeof url =='object')
+                return CatImage;
+            else
+                return image_url + url;
+        }
         // const { activeLink } = this.state;
         return (
                 <div className="sidebar-top BB">
@@ -38,8 +44,8 @@ export default class TopCategories extends React.Component {
                                     <ul className="ul-sidebar catgory-list d-flex">
                                         {this.state.categories.map((category, i) => {
                                             return<li className="ul-sidebar-item catgory-list Dorpdown d-block">
-                                                <div className="cat-img text-center">
-                                                 <img src={logo} alt="cat-img" className="img__size img-fluid" />
+                                                <div className="cat-img">
+                                                 <img src={get_image_url(category.image)} alt="cat-img" className="img__size img-fluid" />
                                                 </div>
                                                 {category.title}
                                                 <span className="li-icon" onMouseEnter={this.handleClick.bind(this, category)} onMouseLeave={this.handleClick.bind(this, {id : 0})}>

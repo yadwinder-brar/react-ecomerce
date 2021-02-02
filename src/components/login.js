@@ -191,7 +191,7 @@ Privacy Policy</a>
 <button className="btn btn__lower text-danger text-capitalize w-100" type="button" onClick={GenerateOtp}>request <span className="text-uppercase">otp</span></button>
 </Form.Group>
 <Form.Group className="text-center mx-auto">
-<span class="new-user text-danger" onClick={handleRegShow}>New to ZRROH CRAFT Create an account
+<span class="new-user mt-5 p-3" onClick={handleRegShow}>New to ZRROH CRAFT <span className=""><a href="" className="createacc text-danger">Create an account</a></span>
 </span>
 </Form.Group>
 </Form>

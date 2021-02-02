@@ -31,12 +31,12 @@ export default class Footer extends React.Component {
     //   }
     render(){
         return (
-            <footer className="section-footer mt-5">
-                <div className="container">
+            <footer className="section-footer">
+                
                     <p className="text-center"> 
                         &copy; Copyright 2021 All rights reserved
                     </p>
-                </div>
+               
             </footer>
         )
     }

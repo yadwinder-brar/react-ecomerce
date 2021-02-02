@@ -9,9 +9,10 @@ export default class Index extends React.Component {
     render(){
         return (
             <>  
-                <Slider2/>
-                {/* <Banner/> */}
-                <FeaturedProducts/>   
+                
+                <FeaturedProducts/> 
+                <Banner/>
+                <Slider2/>  
             </> 
         )
     }

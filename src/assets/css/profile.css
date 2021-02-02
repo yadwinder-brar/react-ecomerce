@@ -12,6 +12,9 @@
 .BB {
     border-bottom: 1px solid #f0f0f0;
 }
+.sidebar-top {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 16%)!important;
+}
 .PK {
     float: right;
     padding: 0 20px 0 5px;

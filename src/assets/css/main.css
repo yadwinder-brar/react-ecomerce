@@ -31,6 +31,9 @@ a:hover {
   transition: 0.5s;
   transform: scaleX(1);
 }
+/* body{
+  background:#f1f3f6;
+} */
 .btn__addcart{
   padding:5px 2px;
   }
@@ -49,7 +52,8 @@ border-radius: 50%;
 ul.show {
   position: absolute;
   background: #fff;
-  z-index: 1;
+  /* background: #dedede; */
+  z-index: 10;
   margin-left: -50px;
   border-radius: 10px;
 }
@@ -104,6 +108,30 @@ button.control-arrow.control-next,button.control-arrow.control-prev {
   padding: 5px 18px;
   border-radius: 50%;
   /* right: 30px;  */
+}
+/* .carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
+  margin: 2px 18px!important; 
+} */
+.carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
+  margin: 2px 0px!important;
+}
+.carousel .thumb,.carousel-status {
+  display: none!important;
+}
+.legend1{
+  transition: .5s ease-in-out;
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  margin-left: -45%;
+  width: 50%;
+  background: none;
+  color: #fff;
+  padding: 10px;
+  font-size: 70px;
+  text-align: center;
+  opacity: .75;
+  transition: opacity .35s ease-in-out;
 }
 li.ul-sidebar-item.catgory-list:hover {
   color: #e16363;
@@ -169,7 +197,11 @@ span.header-cart-text {
 }
 
 img.slider__img{
-  width:95%;
+  width:99%;
+  border-radius: 10px;
+}
+.slider-img:hover {
+  transform: scale(1.10);
 }
 .round {
   border-radius: 1rem!important;
@@ -187,12 +219,11 @@ span.change-text {
 /* .carousel  */
 li.catgory-list {
   list-style: none;
-  padding: 15px 5px;
+  padding: 10px 50px;
   margin-left: 5px;
   font-size: 16px;
   color: rgb(119, 121, 140);
   font-weight: 700;
-  /* line-height: 12px; */
   cursor: pointer;
 }
 li.sub-cat {
@@ -207,7 +238,8 @@ li.sub-cat:hover {
   color: #e98282;
   margin-left: 1px;
   transition: .75s ease-in-out;
-}
+  transition: .25s ease-in-out;
+}s
 span.li-icon {
   font-size: 12px;
   margin-top: 8px;
@@ -223,22 +255,21 @@ ul.ul-sidebar.catgory-list {
 .main-banner{
 width:95%
 }
+.category-outer{
+  max-width:1200px;
+}
 /* .p-catageory {
   margin-top: 35px;
 } */
- .main-product {
-  padding: 0px 15px 50px;
-}
-/* .main-product {
-  padding: 0px 15px;
-} */
 .main-product {
-  display: flex;
-  flex-wrap: wrap;
+  padding: 15px 25px 25px;
+}
+.main-product {
   background-color: #fff;
   position: relative;
   z-index: 1;
-  margin: 0px -15px;
+  margin: 0px;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 16%);
 }
 .card-header {
   background: #fff;
@@ -300,9 +331,9 @@ span.women-shoes {
   color: #fff;
   border-radius: 20%;
 }
-.proudects {
+/* .proudects {
   border-top: 1px solid #c6c0c0;
-}
+} */
 span.prouduct-price {
   cursor: pointer;
   color: #656363;
@@ -520,11 +551,47 @@ footer.section-footer {
 }
 /* animation add to cart end */
 
-/* -------product page css start---------- */
+/* -------slider product page css start---------- */
+ .pro-des{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ }
+ .pro-cat {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 12px;
+ }
+ .pro-prize-range {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 100;
+ }
+ .pro-brand {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.slick-prev:before, .slick-next:before {
+  font-size: 35px!important;
+  color: #191818 !important;
+}
+.slick-next {
+  right: 1px!important;
+  top: calc(50% - 13px)!important;
+}
+.slick-prev {
+  left: 2px!important;;
+  z-index: 43!important;;
+  top: calc(50% - 13.5px)!important;
+}
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+  opacity: 0!important;
+}
 
 
-
-/* -------product page css end---------- */
+/* -------slider product page css end---------- */
 /* -------------------------------Responsive start--------------------------------------- */
 /* -------------------------------Responsive start--------------------------------------- */
 @media only screen and (max-width: 1034px) {
@@ -555,6 +622,9 @@ span.change-text {
 }
 .containers{
   max-width: 95%;
+}
+.sidebar-top {
+  box-shadow: 0 1px 7px 0 rgb(0 0 0 / 16%)!important;
 }
 /* .sidebar-top{
 box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);

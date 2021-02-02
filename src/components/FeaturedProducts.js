@@ -1,10 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import img from '../assets/images/banner2.png';
-import shoes from '../assets/images/shoes2.jpg';
-import img1 from '../assets/images/banner1.jpg';
-import img2 from '../assets/images/discount.png';
-import {Figure,Col,} from 'react-bootstrap';
+import shoes from '../assets/images/abcs.jpeg';
+import shoes1 from '../assets/images/shoes4.jpeg';
+import shoes2 from '../assets/images/shoes3.jpeg';
+import shoes3 from '../assets/images/shoes22.jpeg';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { base_url,image_url } from './config';
 export default class FeaturedProducts extends React.Component {
     constructor() {
@@ -24,177 +27,101 @@ export default class FeaturedProducts extends React.Component {
             method: 'GET',
           }).then(response => response.json()).then(response => { 
               this.setState({ products : response.data.data , total : response.data.total });
-              console.log(this.state.products)
+              console.log('live productst',this.state.products)
           })
           .catch(err => console.log(err))
       }
     render(){
+        const settings = {
+            arrows:true,
+            infinite:false,
+            slidesToShow: 7,
+            slidesToScroll: 1,
+            swipeToSlide: true,
+            responsive: [
+                {
+                    breakpoint: 1300,
+                    settings: {
+                      slidesToShow: 6,
+                      slidesToScroll: 1
+                    }
+                  },
+                  {
+                    breakpoint: 1000,
+                    settings: {
+                      slidesToShow: 5,
+                      slidesToScroll: 1
+                    }
+                  },
+                {
+                breakpoint: 800,
+                settings: {
+                  arrows:false,
+                  slidesToShow: 3,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  arrows:false,
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          };
         return (
-                <div className="proudects">
+                <div className="proudects mb-5">
                     <div className="container-fluid">
-                        <div className="row no-gutters">
-                            <div className="col-12">
-                                <div className="main-product">
-                                    <div className="col-8 bg-white border-bottom border-top">
-                                        <h4 className="pro-category text-uppercase">fresh arrival</h4>
-                                        <span className="pro-sub-category">women footwear</span>
+                        <div className="main-product mt-3">
+                            <div className="mainpro-des border-bottom">
+                                <div className="row no-gutters">
+                                    <div className="col-8 bg-white pt-3">
+                                        <h4 className="pro-category text-capitalize">fresh arrival</h4>
+                                        <span className="pro-sub-category text-muted text-capitalize">men footwear</span>
                                     </div>
-                                    <div className="col-4 bg-white text-right border-bottom border-top">
+                                    <div className="col-4 bg-white pt-3 text-right pr-3">
                                         <Link to="/" className="btn btn-danger text-uppercase  my-3"> view all</Link>
                                     </div>
-                                    <div className="row">
-                                    {this.state.products.map((product, i) => {
-                                        return<div className="col-sm-6 col-md-4 col-lg-2">        
-                                                    <div className="card mb-3">
-                                                    <div className="card-header my-1">
-
-                                                    </div>
-                                                        <div className="card-body text-center">
-                                                            <img src={image_url + JSON.parse(product.image)[0]} alt="product image" className="p-img mx-auto img-fluid"/>
-                                                        </div>
-                                                        <div className="card-footer">
-                                                            <div className="footer-top text-center w-75 mx-auto">
-                                                                {product.product_name}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div> 
-                                        })}   
-                                        
-                                    </div>
-                                    
-                                    
-                                    
-                                    <div className="col-8 bg-white border-bottom border-top">
-                                        <h4 className="pro-category text-uppercase">best of ladies Footwear</h4>
-                                        <span className="pro-sub-category">women footwear</span>
-                                    </div>
-                                    <div className="col-4 bg-white text-right border-bottom border-top ">
-                                        <Link to="/" className="btn btn-danger text-uppercase  my-3"> view all</Link>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-sm-6 col-md-4 col-lg-2">        
-                                            <div className="card mb-3">
-                                                <div className="card-header my-1">
-
-                                                </div>
-                                                <div className="card-body">
-                                                {/* <img src={img2} alt="discount image" className="d-img"/>
-                                                    <span className="text-white position-absolute cbn">10% off</span> */}
-                                                    <img src={img1} alt="product image" className="p-img img-fluid"/>
-                                                </div>
-                                                <div className="card-footer d-flex">
-                                                    <div className="footer-left w-50">
-                                                        <span className="prouduct-price">$90</span>
-                                                    </div>
-                                                    <div className="footer-right w-50 text-right text-right">
-                                                        <span className="buy"><button className="btn btn-danger btn__addcart" >Add to cart</button></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6 col-md-4 col-lg-2">           
-                                            <div className="card mb-3">
-                                            <div className="card-header my-1">
-
-                                                </div>
-                                                <div className="card-body">
-                                                    {/* <img src={img2} alt="discount image" className="d-img"/>
-                                                    <span className="text-white position-absolute cbn">10% off</span> */}
-                                                    <img src={img1} alt="product image" className="p-img img-fluid"/>
-                                                    
-                                                </div>
-                                                <div className="card-footer d-flex">
-                                                    <div className="footer-left w-50">
-                                                        <span className="prouduct-price">$90</span>
-                                                    </div>
-                                                    <div className="footer-right w-50 text-right">
-                                                    <span className="buy"><button className="btn btn-danger btn__addcart" >Add to cart</button></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6 col-md-4 col-lg-2">       
-                                            <div className="card mb-3">
-                                            <div className="card-header my-1">
-
-                                                </div>
-                                                <div className="card-body">
-                                                    <img src={img1} alt="product image" className="p-img img-fluid"/>
-                                                </div>
-                                                <div className="card-footer d-flex">
-                                                    <div className="footer-left w-50">
-                                                        <span className="prouduct-price">$100</span>
-                                                    </div>
-                                                    <div className="footer-right w-50 text-right">
-                                                        <span className="buy"><button className="btn btn-danger btn__addcart" >Add to cart</button></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6 col-md-4 col-lg-2">       
-                                            <div className="card mb-3">
-                                            <div className="card-header my-1">
-
-                                                </div>
-                                                <div className="card-body">
-                                                    <img src={img1} alt="product image" className="p-img img-fluid"/>
-                                                </div>
-                                                <div className="card-footer d-flex">
-                                                    <div className="footer-left w-50">
-                                                        <span className="prouduct-price">$100</span>
-                                                    </div>
-                                                    <div className="footer-right w-50 text-right">
-                                                        <span className="buy"><button className="btn btn-danger btn__addcart" >Add to cart</button></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6 col-md-4 col-lg-2">       
-                                            <div className="card mb-3">
-                                                <div className="card-header my-1">
-
-                                                </div>
-                                                <div className="card-body">
-                                                    <img src={img1} alt="product image" className="p-img img-fluid"/>
-                                                </div>
-                                                <div className="card-footer d-flex">
-                                                    <div className="footer-left w-50">
-                                                        <span className="prouduct-price">$100</span>
-                                                    </div>
-                                                    <div className="footer-right w-50 text-right">
-                                                        <span className="buy"><button className="btn btn-danger btn__addcart" >Add to cart</button></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6 col-md-4 col-lg-2">       
-                                            <div className="card mb-3">
-                                            <div className="card-header my-1">
-
-                                                </div>
-                                                <div className="card-body">
-                                                    <img src={img1} alt="product image" className="p-img img-fluid"/>
-                                                </div>
-                                                <div className="card-footer d-flex">
-                                                    <div className="footer-left w-50">
-                                                        <span className="prouduct-price">$100</span>
-                                                    </div>
-                                                    <div className="footer-right w-50 text-right">
-                                                        <span className="buy"><button className="btn btn-danger btn__addcart" >Add to cart</button></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>   
-                                  
                                 </div>
-                                
-                                
+                            </div>
+                            <div className="main-top-slider">
+                                <Slider {...settings}>
+                                    {this.state.products.map((product, i) => { 
+                                        <div className="slider-item my-3" >
+                                            <img height={150} width={150} className="slider-img mx-auto" src={image_url + JSON.parse(product.image)[0]} />
+                                            <div className="d-block text-center pro-detail">
+                                                <div class="pro-cat pro-des mb-1">MMMMMMMMMMMMMMMMMs</div>
+                                                <div class="pro-des pro-prize-range text-success pt-1">starting from Rs.{product.price}</div>
+                                                <div class="pro-des pro-brand text-muted pt-1">ttttttttttttttttttttt</div>
+                                            </div>
+                                        </div>
+                                    })}  
+                                   
+                                   
+                                    {/* <div className="slider-item my-3">
+                                        <img height={150} width={150} className="slider-img mx-auto" src={shoes2} />
+                                         <div className="d-block text-center">
+                                            <div class="pro-cat pro-des mb-1">men shoes</div>
+                                            <div class="pro-des pro-prize-range text-success pt-1">starting from 1200</div>
+                                            <div class="pro-des pro-brand text-muted pt-1">punjabi jutti</div>
+                                        </div>
+                                    </div>
+                                    <div className="slider-item my-3">
+                                        <img height={150} width={150} className="slider-img mx-auto" src={shoes} />
+                                         <div className="d-block text-center">
+                                            <div class="pro-cat pro-des mb-1">men shoes</div>
+                                            <div class="pro-des pro-prize-range text-success pt-1">starting from 1200</div>
+                                            <div class="pro-des pro-brand text-muted pt-1">punjabi jutti</div>
+                                        </div>
+                                    </div> */}
+                                </Slider>
                             </div>
                         </div>
-                    </div>           
-                </div>    
+                    </div>
+                </div>
+                           
         )
     }
 }
