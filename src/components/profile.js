@@ -1,5 +1,5 @@
 import React from 'react'
-import {Row,Col,Container} from 'react-bootstrap';
+import {Row,Col,Container,Form,Button} from 'react-bootstrap';
 import proimg from '../assets/images/profile-pic-male.svg';
 import { FaUser} from 'react-icons/fa';
 export default class Profile extends React.Component {
@@ -92,7 +92,7 @@ export default class Profile extends React.Component {
                                 </Col>
                                 <Col xs={8}>
                                     <div className="profile-right-main b-shadow bg-white">
-                                        <div className="inner-1st">
+                                        <div className="inner-1st ">
                                             <div className="info-main">
                                                 <div className="top-info-main">
                                                     <div className="top-info">
@@ -164,6 +164,76 @@ export default class Profile extends React.Component {
                                                     </form>
                                                 </div>
                                             </div> 
+                                        </div>
+                                        <div className="inner-2nd d-none">
+                                            <div className="top-info-main">
+                                                <div className="address-main">
+                                                    <div className="manage-top text-capitalize">
+                                                        <h4 className="title-top ">manage addresses</h4>
+                                                        <div className="adress-form-top">
+                                                            <div className="add-heading text-danger">add a new address</div>
+                                                            <div className="form-outer">
+                                                                <Form>
+                                                                    <Form.Row>
+                                                                        <Col md={6}>
+                                                                        <Form.Group controlId="formGridEmail">
+                                                                        <Form.Label>Name</Form.Label>
+                                                                        <Form.Control type="text" placeholder="Enter your name" />
+                                                                        </Form.Group>
+                                                                        </Col>
+                                                                        <Col md={6}>
+                                                                        <Form.Group controlId="formGridPassword">
+                                                                        <Form.Label>mobile</Form.Label>
+                                                                        <Form.Control type="tel" placeholder="enter your 10 digit mobile number" />
+                                                                        </Form.Group>
+                                                                        </Col>
+                                                                    </Form.Row>
+                                                                    <Form.Row>
+                                                                        <Col md={6}>
+                                                                        <Form.Group  controlId="formGridEmail">
+                                                                        <Form.Label>Email</Form.Label>
+                                                                        <Form.Control type="email" placeholder="Enter email" />
+                                                                        </Form.Group>
+                                                                        </Col>
+                                                                        <Col md={6}>
+                                                                        <Form.Group  controlId="formGridPassword">
+                                                                        <Form.Label>Password</Form.Label>
+                                                                        <Form.Control type="password" placeholder="Password" />
+                                                                        </Form.Group>
+                                                                        </Col>
+                                                                    </Form.Row>
+                                                                    <Form.Row>
+                                                                        <Form.Group as={Col}>
+                                                                            <Form.Label>address</Form.Label>
+                                                                            <textarea class="form-control" rows="3" id="comment"></textarea>
+                                                                        </Form.Group>
+                                                                    </Form.Row>
+                                                                    <Form.Row>
+                                                                        <Col md={6}>
+                                                                        <Form.Group  controlId="formGridCity">
+                                                                        <Form.Label>City</Form.Label>
+                                                                        <Form.Control />
+                                                                        </Form.Group>
+                                                                        </Col>
+                                                                        <Col md={6}>
+                                                                        <Form.Group  controlId="formGridCity">
+                                                                        <Form.Label>pincode</Form.Label>
+                                                                        <Form.Control />
+                                                                        </Form.Group>
+                                                                        </Col>
+                                                                    </Form.Row>
+                                                                    <button className="btn btn-danger text-uppercase mt-3 ml-5">submit</button>
+                                                                </Form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="inner-3rd d-none">
+                                            <div className="">
+
+                                            </div>
                                         </div>
                                     </div>
                                 </Col>

@@ -10,6 +10,8 @@ import Profile from '../components/profile';
 import Slider from '../components/slider.js';
 import TopCategories from '../components/TopCategories.js';
 import Singleproduct from '../components/singleproduct.js';
+import Cart from '../components/cart.js';
+import Orders from '../components/orders.js';
 export default class MainRouting extends React.Component {
   
     render(){
@@ -25,6 +27,8 @@ export default class MainRouting extends React.Component {
                                 <Route exact path='/product' component={Product}/>
                                 <Route exact path='/singleproduct' component={Singleproduct}/>
                                 <Route exact path='/profile' component={Profile}/>
+                                <Route exact path='/cart' component={Cart}/>
+                                <Route exact path='/orders' component={Orders}/>
 
                             </Switch>                        
                         <Footer/>                                                   

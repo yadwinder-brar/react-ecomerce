@@ -70,7 +70,7 @@ color:var(--main-color) !important;
 .profile-right-main {
     min-height: 863px;
 }
-.inner-1st {
+.inner-1st,.inner-2nd {
     padding: 24px 32px 0;
 }
 .top-info-main {
@@ -247,3 +247,14 @@ button._2KpZ6l._3eVCfA {
     font-size: 16px;
     box-shadow: none;
 }
+/* inner-2nd css start  */
+.adress-form-top {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    background: #f5e8e8;
+}
+.form-outer {
+    padding: 40px 7px;
+}
+
+/* inner-2nd css end  */

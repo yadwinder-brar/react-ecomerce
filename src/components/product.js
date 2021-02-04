@@ -1,6 +1,6 @@
 import React from 'react'
 import {Row,Col,Form} from 'react-bootstrap';
-import img2 from '../assets/images/ladies.jpeg';
+import img2 from '../assets/images/jutti8.jpeg';
 import img3 from '../assets/images/chair.jpeg';
 import img4 from '../assets/images/singlepro5.jpeg';
 import img5 from '../assets/images/singlepro6.jpeg';
@@ -178,20 +178,190 @@ export default class Product extends React.Component {
                             <Col md={10}>
                                 <div className="products-right">
                                     <div className="products">
-                                        <div className="product-outer">
+                                        <div className="product-outer"> {/* div dynamic*/}
                                             <div className="product-main">
-                                                <div className="">
-                                                    <img src={img2} className="" alt=""/>
+                                                <div className="promain-img text-center">
+                                                    <img src={img2} className="product-img img-fluid" alt=""/>
                                                 </div>
-                                                <div className="product-detail-outer">
+                                                <div className="product-detail-outer text-capitalize mt-3 py-3 px-5">
                                                     <div className="p-brand">nike</div>
-                                                    <div className="p-detail">good for health</div>
+                                                    <div className="p-detail">good for health,waking,running</div>
                                                     <div className="p-prize">
-                                                        <span className="">1200</span>
-                                                        <del className="oriznal-p">1800</del>
+                                                        <span className="discount-prize">₹700</span>
+                                                        <del className="oriznal-p text-muted">₹1200</del>
                                                         <span className="dis-persent">35%</span>
                                                     </div>
-                                                    <div className="p-size"><span className="text-muted text-uppercase">size</span>1,2,3,4,6</div>
+                                                    <div className="p-size"><span className="size text-muted text-uppercase">size</span>1,2,3,4,6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="product-outer"> {/* div dynamic*/}
+                                            <div className="product-main">
+                                                <div className="promain-img  text-center">
+                                                    <img src={img3} className="product-img img-fluid" alt=""/>
+                                                </div>
+                                                <div className="product-detail-outer text-capitalize mt-3 py-3 px-5">
+                                                    <div className="p-brand">nike</div>
+                                                    <div className="p-detail">good for health,waking,running</div>
+                                                    <div className="p-prize">
+                                                        <span className="discount-prize">₹700</span>
+                                                        <del className="oriznal-p text-muted">₹1200</del>
+                                                        <span className="dis-persent">35%</span>
+                                                    </div>
+                                                    <div className="p-size"><span className="size text-muted text-uppercase">size</span>1,2,3,4,6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="product-outer"> {/* div dynamic*/}
+                                            <div className="product-main">
+                                                <div className="promain-img  text-center">
+                                                    <img src={img2} className="product-img img-fluid" alt=""/>
+                                                </div>
+                                                <div className="product-detail-outer text-capitalize mt-3 py-3 px-5">
+                                                    <div className="p-brand">nike</div>
+                                                    <div className="p-detail">good for health,waking,running</div>
+                                                    <div className="p-prize">
+                                                        <span className="discount-prize">₹700</span>
+                                                        <del className="oriznal-p text-muted">₹1200</del>
+                                                        <span className="dis-persent">35%</span>
+                                                    </div>
+                                                    <div className="p-size"><span className="size text-muted text-uppercase">size</span>1,2,3,4,6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="product-outer"> {/* div dynamic*/}
+                                            <div className="product-main">
+                                                <div className="promain-img  text-center">
+                                                    <img src={img3} className="product-img img-fluid" alt=""/>
+                                                </div>
+                                                <div className="product-detail-outer text-capitalize mt-3 py-3 px-5">
+                                                    <div className="p-brand">nike</div>
+                                                    <div className="p-detail">good for health,waking,running</div>
+                                                    <div className="p-prize">
+                                                        <span className="discount-prize">₹700</span>
+                                                        <del className="oriznal-p text-muted">₹1200</del>
+                                                        <span className="dis-persent">35%</span>
+                                                    </div>
+                                                    <div className="p-size"><span className="size text-muted text-uppercase">size</span>1,2,3,4,6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="product-outer"> {/* div dynamic*/}
+                                            <div className="product-main">
+                                                <div className="promain-img  text-center">
+                                                    <img src={img3} className="product-img img-fluid" alt=""/>
+                                                </div>
+                                                <div className="product-detail-outer text-capitalize mt-3 py-3 px-5">
+                                                    <div className="p-brand">nike</div>
+                                                    <div className="p-detail">good for health,waking,running</div>
+                                                    <div className="p-prize">
+                                                        <span className="discount-prize">₹700</span>
+                                                        <del className="oriznal-p text-muted">₹1200</del>
+                                                        <span className="dis-persent">35%</span>
+                                                    </div>
+                                                    <div className="p-size"><span className="size text-muted text-uppercase">size</span>1,2,3,4,6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="product-outer"> {/* div dynamic*/}
+                                            <div className="product-main">
+                                                <div className="promain-img  text-center">
+                                                    <img src={img3} className="product-img img-fluid" alt=""/>
+                                                </div>
+                                                <div className="product-detail-outer text-capitalize mt-3 py-3 px-5">
+                                                    <div className="p-brand">nike</div>
+                                                    <div className="p-detail">good for health,waking,running</div>
+                                                    <div className="p-prize">
+                                                        <span className="discount-prize">₹700</span>
+                                                        <del className="oriznal-p text-muted">₹1200</del>
+                                                        <span className="dis-persent">35%</span>
+                                                    </div>
+                                                    <div className="p-size"><span className="size text-muted text-uppercase">size</span>1,2,3,4,6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="product-outer"> {/* div dynamic*/}
+                                            <div className="product-main">
+                                                <div className="promain-img  text-center">
+                                                    <img src={img2} className="product-img img-fluid" alt=""/>
+                                                </div>
+                                                <div className="product-detail-outer text-capitalize mt-3 py-3 px-5">
+                                                    <div className="p-brand">nike</div>
+                                                    <div className="p-detail">good for health,waking,running</div>
+                                                    <div className="p-prize">
+                                                        <span className="discount-prize">₹700</span>
+                                                        <del className="oriznal-p text-muted">₹1200</del>
+                                                        <span className="dis-persent">35%</span>
+                                                    </div>
+                                                    <div className="p-size"><span className="size text-muted text-uppercase">size</span>1,2,3,4,6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="product-outer"> {/* div dynamic*/}
+                                            <div className="product-main">
+                                                <div className="promain-img  text-center">
+                                                    <img src={img2} className="product-img img-fluid" alt=""/>
+                                                </div>
+                                                <div className="product-detail-outer text-capitalize mt-3 py-3 px-5">
+                                                    <div className="p-brand">nike</div>
+                                                    <div className="p-detail">good for health,waking,running</div>
+                                                    <div className="p-prize">
+                                                        <span className="discount-prize">₹700</span>
+                                                        <del className="oriznal-p text-muted">₹1200</del>
+                                                        <span className="dis-persent">35%</span>
+                                                    </div>
+                                                    <div className="p-size"><span className="size text-muted text-uppercase">size</span>1,2,3,4,6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="product-outer"> {/* div dynamic*/}
+                                            <div className="product-main">
+                                                <div className="promain-img  text-center">
+                                                    <img src={img2} className="product-img img-fluid" alt=""/>
+                                                </div>
+                                                <div className="product-detail-outer text-capitalize mt-3 py-3 px-5">
+                                                    <div className="p-brand">nike</div>
+                                                    <div className="p-detail">good for health,waking,running</div>
+                                                    <div className="p-prize">
+                                                        <span className="discount-prize">₹700</span>
+                                                        <del className="oriznal-p text-muted">₹1200</del>
+                                                        <span className="dis-persent">35%</span>
+                                                    </div>
+                                                    <div className="p-size"><span className="size text-muted text-uppercase">size</span>1,2,3,4,6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="product-outer"> {/* div dynamic*/}
+                                            <div className="product-main">
+                                                <div className="promain-img  text-center">
+                                                    <img src={img2} className="product-img img-fluid" alt=""/>
+                                                </div>
+                                                <div className="product-detail-outer text-capitalize mt-3 py-3 px-5">
+                                                    <div className="p-brand">nike</div>
+                                                    <div className="p-detail">good for health,waking,running</div>
+                                                    <div className="p-prize">
+                                                        <span className="discount-prize">₹700</span>
+                                                        <del className="oriznal-p text-muted">₹1200</del>
+                                                        <span className="dis-persent">35%</span>
+                                                    </div>
+                                                    <div className="p-size"><span className="size text-muted text-uppercase">size</span>1,2,3,4,6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="product-outer"> {/* div dynamic*/}
+                                            <div className="product-main">
+                                                <div className="promain-img  text-center">
+                                                    <img src={img2} className="product-img img-fluid" alt=""/>
+                                                </div>
+                                                <div className="product-detail-outer text-capitalize mt-3 py-3 px-5">
+                                                    <div className="p-brand">nike</div>
+                                                    <div className="p-detail">good for health,waking,running</div>
+                                                    <div className="p-prize">
+                                                        <span className="discount-prize">₹700</span>
+                                                        <del className="oriznal-p text-muted">₹1200</del>
+                                                        <span className="dis-persent">35%</span>
+                                                    </div>
+                                                    <div className="p-size"><span className="size text-muted text-uppercase">size</span>1,2,3,4,6</div>
                                                 </div>
                                             </div>
                                         </div>

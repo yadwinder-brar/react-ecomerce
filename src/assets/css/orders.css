@@ -1,0 +1,47 @@
+
+.order-inner {
+    padding:45px 10px;
+    width: 100%;
+    font-size: 14px;
+    overflow: hidden;
+    transition: box-shadow .1s linear;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 15%);
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+.order-inner:hover {
+    z-index: 1;
+    box-shadow: 0 1px 12px 2px #dbdbdb;
+}
+.myorders {
+    background: #f1f3f6;
+    padding: 50px 10px;
+}
+.order-left {
+    width: 75px;
+    height: 75px;
+}
+.or__img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+span.delivery-date {
+    font-size: 18px;
+    font-weight: 900;
+    font-family: Roboto;
+}
+p.or-status {
+    font-size: 14px;
+    font-weight: 600;
+}

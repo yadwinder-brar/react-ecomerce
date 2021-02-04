@@ -4,6 +4,8 @@ import './assets/css/main.css';
 import './assets/css/profile.css';
 import './assets/css/singleproduct.css';
 import './assets/css/products.css';
+import './assets/css/cart.css';
+import './assets/css/orders.css';
 
 import MainRouting from './routes/routeMain';
 
