@@ -31,9 +31,9 @@ export default class Header extends React.Component {
                                     </div>
                                 </form> 
                             </div>
-                            <div className="col-7 col-sm-6 col-md-5 col-lg-3 offset-lg-1 order-sm-3 order-2">
+                            <div className="col-7 col-sm-6 col-md-5 col-lg-4 order-sm-3 order-2">
                                 <div class="widgets-wrap d-flex text-capitalize widget-header">
-                                    <div class="header-nav d-flex">
+                                    <div class="header-nav d-flex mx-auto">
                                         <li class="nav-text cc">OFFER</li>
                                         <li class="nav-text "> 
                                             <Login/> 

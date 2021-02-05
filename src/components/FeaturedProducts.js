@@ -60,6 +60,14 @@ export default class FeaturedProducts extends React.Component {
                   slidesToScroll: 1
                 }
               },
+                {
+                breakpoint: 600,
+                settings: {
+                  arrows:false,
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+              },
               {
                 breakpoint: 480,
                 settings: {
@@ -76,11 +84,11 @@ export default class FeaturedProducts extends React.Component {
                         <div className="main-product mt-3">
                             <div className="mainpro-des border-bottom">
                                 <div className="row no-gutters">
-                                    <div className="col-8 bg-white pt-3">
+                                    <div className="col-8 bg-white py-3 px-md-0 px-3">
                                         <h4 className="pro-category text-capitalize">fresh arrival</h4>
                                         <span className="pro-sub-category text-muted text-capitalize">men footwear</span>
                                     </div>
-                                    <div className="col-4 bg-white pt-3 text-right pr-3">
+                                    <div className="col-4 bg-white text-md-right text-center py-sm-3 py-0">
                                         <Link to="/" className="btn btn-danger text-uppercase  my-3"> view all</Link>
                                     </div>
                                 </div>
@@ -101,32 +109,6 @@ export default class FeaturedProducts extends React.Component {
                                            
                                         </div>
                                     })}  
-                                   
-                                   
-                                    {/* <div className="slider-item my-3">
-                                        <img height={150} width={150} className="slider-img mx-auto" src={shoes3} />
-                                         <div className="d-block text-center">
-                                            <div class="pro-cat pro-des mb-1">men shoes</div>
-                                            <div class="pro-des pro-prize-range text-success pt-1">starting from 1200</div>
-                                            <div class="pro-des pro-brand text-muted pt-1">punjabi jutti</div>
-                                        </div>
-                                    </div>
-                                    <div className="slider-item my-3">
-                                        <img height={150} width={150} className="slider-img mx-auto" src={shoes2} />
-                                         <div className="d-block text-center">
-                                            <div class="pro-cat pro-des mb-1">men shoes</div>
-                                            <div class="pro-des pro-prize-range text-success pt-1">starting from 1200</div>
-                                            <div class="pro-des pro-brand text-muted pt-1">punjabi jutti</div>
-                                        </div>
-                                    </div>
-                                    <div className="slider-item my-3">
-                                        <img height={150} width={150} className="slider-img mx-auto" src={shoes2} />
-                                         <div className="d-block text-center">
-                                            <div class="pro-cat pro-des mb-1">men shoes</div>
-                                            <div class="pro-des pro-prize-range text-success pt-1">starting from 1200</div>
-                                            <div class="pro-des pro-brand text-muted pt-1">punjabi jutti</div>
-                                        </div>
-                                    </div> */}
                                 </Slider>
                             </div>
                         </div>

@@ -41,14 +41,14 @@ export default class TopCategories extends React.Component {
                         <div className="row">
                             <div className="col-12">
                                 <div className="p-catageory">
-                                    <ul className="ul-sidebar catgory-list d-flex">
+                                    <ul className="ul-sidebar catgory-list d-flex text-center">
                                         {this.state.categories.map((category, i) => {
-                                            return<li className="ul-sidebar-item catgory-list Dorpdown d-block">
-                                                <div className="cat-img">
+                                            return<li className="ul-sidebar-item catgory-list Dorpdown d-block" onMouseEnter={this.handleClick.bind(this, category)} onMouseLeave={this.handleClick.bind(this, {id : 0})}>
+                                                <div className="cat-img text-center">
                                                  <img src={get_image_url(category.image)} alt="cat-img" className="img__size img-fluid" />
                                                 </div>
                                                 {category.title}
-                                                <span className="li-icon" onMouseEnter={this.handleClick.bind(this, category)} onMouseLeave={this.handleClick.bind(this, {id : 0})}>
+                                                <span className="li-icon d-none">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16px">
                                                         <path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z" fill="currentColor" stroke="currentColor">
                                                         </path>

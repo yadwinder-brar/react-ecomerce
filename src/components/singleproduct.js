@@ -167,6 +167,14 @@ export default class  extends React.Component {
                   slidesToScroll: 1
                 }
               },
+                {
+                breakpoint: 600,
+                settings: {
+                  arrows:false,
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+              },
               {
                 breakpoint: 480,
                 settings: {
@@ -184,7 +192,7 @@ export default class  extends React.Component {
                         <div className="singlepro-main-outer">
                             <div className="singlepro-main bg-white">
                                 <Row>
-                                    <Col xs={1}>
+                                    <Col md={2} xs={4}>
                                         <div className="single-proimg sidebar">
                                             <div className="bg-img-outer">
                                                 <div className="top-img-1 side-img text-center"></div>
@@ -195,41 +203,41 @@ export default class  extends React.Component {
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col xs={4}>
+                                    <Col md={4} xs={8}>
                                         <div className="product-fullimg">
                                             <img src={image_url + this.state.product.images_details[0].image} className=" img-fluid full-img" id="myimage" alt=""/>
                                         </div>
                                     </Col>
                                     
-                                    <Col xs={7}>
-                                        <div className="right-outer p-5">
+                                    <Col md={6}>
+                                        <div className="right-outer pt-5">
                                             <div className="right-top1">
                                                 <div class="zoom1 d-none">
                                                     <div id="myresult" class="img-zoom-result"></div>
                                                 </div>
                                                 <div className="brand-name text-capitalize">
                                                     <div className="category-name">
-                                                        <h5 className="brand-name text-muted text-capitalize">{this.state.product.product_name}</h5>
+                                                        <h5 className="brand-name text-muted text-capitalize mb-1">{this.state.product.product_name}</h5>
                                                         <span className="shoes-type text-capitalize">casual for men</span>
                                                     </div>
-                                                    <div className="category-price">
+                                                    <div className="category-price py-3">
                                                         <div className="price-top">
                                                             <span className="price-top-text text-success">special price</span>
                                                         </div>
-                                                        <div className="price-bottom">
+                                                        <div className="price-bottom pt-3">
                                                             <span className="price-number">₹{this.state.product.selling_price}<del className="old-price text-muted">₹{this.state.product.price}</del></span>
                                                             <span className="off-on-price text-success">45% off</span>
                                                         </div>
                                                     </div>
                                                     <Form>
-                                                        <div className="product-color mt-5">
-                                                            <h4 className=" text-capitalize text-muted p-3"><h2>{this.props.match.params.id}</h2>select color</h4>
+                                                        <div className="product-color mt-3">
+                                                            <h3 className=" text-capitalize text-muted">select color</h3>
                                                             <div class="color-type">
-                                                                <div class="pro-colors d-flex px-3">
+                                                                <div class="pro-colors">
                                                                 {this.state.product.product_details.map((color, i) => { 
                                                                     return <div class="color-1 pcolor mr-3">
                                                                                 <a href="" style={{color:color.color_code}}>
-                                                                                    <div class="color-name1"></div>
+                                                                                    <div class="color-name1 mx-auto "></div>
                                                                                 </a>
                                                                                 <div class="color__name mt-1 pt-1">
                                                                                     <span>{color.color_string}</span>
@@ -248,18 +256,18 @@ export default class  extends React.Component {
                                     </Col>
                                 </Row>
                                  <Row>         
-                                    <Col xs={5}>
-                                        <div className="shoping-button d-flex py-3 text-uppercase">
+                                    <Col md={6}>
+                                        <div className="shoping-button d-flex py-3 mt-3 text-uppercase">
                                             <div className="left-button w-50 p-1">
-                                                <button className="btn btn-danger text-uppercase p-3 w-100">add to cart</button>
+                                                <button className="btn btn-danger text-uppercase p-sm-3 p-1 w-100">add to cart</button>
                                             </div>
                                             <div className="right-button w-50 p-1">
-                                                <button className=" btn btn-warning text-uppercase text-white p-3 w-100">buy now</button>
+                                                <button className=" btn btn-warning text-uppercase text-white p-sm-3 p-1 w-100">buy now</button>
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col xs={7}>
-                                    <p>{this.state.product.description}</p> 
+                                    <Col md={6}>
+                                    <p className="text-capitalize pt-3 mt-3">{this.state.product.description}</p> 
                                     </Col>
                                 </Row>         {/*buttons  html end */}
                             </div>
