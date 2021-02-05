@@ -39,22 +39,22 @@ export default class SimpleSlider extends Component {
       <div className="main-top-slider py-3">
         <Slider {...settings}>
                 <div className="slider-item my-3">
-                <img height={250} className="slider__img mx-auto" src={slider1} />
+                <img  className="slider__img mx-auto" src={slider1} />
                 </div>
                 <div className="slider-item my-3 ">
-                <img height={250} className="slider__img mx-auto" src={slider2} />
+                <img  className="slider__img mx-auto" src={slider2} />
                 </div>
                 <div className="slider-item my-3 ">
-                <img height={250} className="slider__img mx-auto" src={slider3} />
+                <img  className="slider__img mx-auto" src={slider3} />
                 </div>
                 <div className="slider-item my-3 ">
-                <img height={250} className="slider__img mx-auto" src={slider1} />
+                <img  className="slider__img mx-auto" src={slider1} />
                 </div>
                 <div className="slider-item my-3 ">
-                <img height={250} className="slider__img mx-auto" src={slider2} />
+                <img  className="slider__img mx-auto" src={slider2} />
                 </div>
                 <div className="slider-item my-3">
-                <img height={250} className="slider__img mx-auto" src={slider3} />
+                <img  className="slider__img mx-auto" src={slider3} />
                 </div>
         </Slider>
       </div>

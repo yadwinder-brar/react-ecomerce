@@ -9,17 +9,17 @@ export default class Banner extends React.Component {
                 <div className="main-banner my-3 mx-auto">
                     <div className="container-fluid">
                         <div className="row">
-                            <div className="col-4">
-                                <div className="b-img">
+                            <div className="col-md-4">
+                                <div className="b-img my-3">
                                     <img src={img} className="w-100 round" alt=""/>
                                 </div>
                             </div>
-                            <div className="col-4">
-                                <div className="b-img">
+                            <div className="col-md-4">
+                                <div className="b-img my-3">
                                     <img src={img1} className="w-100 round" alt=""/>
                                 </div>
                             </div>
-                            <div className="col-4">
+                            <div className="col-md-4 my-3">
                                 <div className="b-img">
                                     <img src={img2} className="w-100 round" alt=""/>
                                 </div>

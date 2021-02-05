@@ -25,7 +25,7 @@ export default class MainRouting extends React.Component {
                             <Switch>
                                 <Route exact path='/' component={Index}/>
                                 <Route exact path='/product' component={Product}/>
-                                <Route exact path='/singleproduct' component={Singleproduct}/>
+                                <Route exact path='/singleproduct/:id' component={Singleproduct}/>
                                 <Route exact path='/profile' component={Profile}/>
                                 <Route exact path='/cart' component={Cart}/>
                                 <Route exact path='/orders' component={Orders}/>

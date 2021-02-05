@@ -2,6 +2,8 @@ import React from 'react'
 import {Row,Col,Container,Form,Button} from 'react-bootstrap';
 import proimg from '../assets/images/profile-pic-male.svg';
 import { FaUser} from 'react-icons/fa';
+import logo from '../assets/images/white_logo.png';
+import { Link} from 'react-router-dom'
 export default class Profile extends React.Component {
    
     render(){
@@ -28,7 +30,7 @@ export default class Profile extends React.Component {
                                                 <div className="orders p-3">
                                                     <a href="" className="order-link">
                                                         <span className="acc-icon text-danger"><FaUser/></span>
-                                                        <span className="order-text text-muted text-uppercase pl-3">my orders</span>
+                                                        <span className="order-text text-muted text-uppercase pl-3"><Link to="/orders">my orders</Link></span>
                                                         <span className="order-icon">
                                                             <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="HQ">
                                                             <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class=""></path>

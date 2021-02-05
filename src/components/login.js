@@ -148,6 +148,7 @@ return <Dropdown>
 
 <Dropdown.Menu>
 <Dropdown.Item href="#">Offers</Dropdown.Item>
+<Dropdown.Item><Link to="/profile">profile</Link></Dropdown.Item>
 <Dropdown.Item href="#">Orders</Dropdown.Item>
 <Dropdown.Item onClick={logout}>Logout</Dropdown.Item>
 </Dropdown.Menu>

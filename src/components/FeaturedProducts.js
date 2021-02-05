@@ -89,7 +89,7 @@ export default class FeaturedProducts extends React.Component {
                                 <Slider {...settings}>
                                     {this.state.products.map((product, i) => { 
                                         return<div className="slider-item my-3" >
-                                            <Link to="/singleproduct"> 
+                                            <Link to={"singleproduct/"+product.product_uri}>
                                             <img height={150} width={150} className="slider-img mx-auto" src={image_url + product.images_details[0].image} />
                                                 <div className="d-block text-center pro-detail">
                                                     <div class="pro-cat pro-des mb-1">{product.product_name}</div>

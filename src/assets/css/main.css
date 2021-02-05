@@ -668,7 +668,8 @@ box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
 .modal-dialog {
   max-width: 80%;
 }
-/* Responsive end(1034) */
+/*--------------Responsive end(1034)----------------------- */
+/*--------------Responsive end(1034)----------------------- */
 }
 /* Responsive end(1034) */
 /* Responsive start(768) */
@@ -711,6 +712,13 @@ span.change-text {
 .left-login {
   padding: 40px 15px;
  }
+ form.search {
+  margin-top:0px;
+}
+.input-group {
+  width: 90% !important;
+  margin: auto !important;
+}
 span.left-text {
   line-height: 30px;
   font-size: 15px;
@@ -746,5 +754,11 @@ footer.section-footer {
 }
 .footer-inner {
   padding-left: 30px;
+}
+span.header-cart-text {
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 10px;
+  display: none;
 }
 }

@@ -12,14 +12,14 @@ export default class Header extends React.Component {
                 <div className="header">
                     <div className=" container-fluid">
                         <div className="row">
-                            <div className="col-4 col-sm-2"> 
+                            <div className="col-4 col-sm-2 order-xs-1 order-1"> 
                                 <div className="logo text-center">
                                     <Link to="/" className="header-link" >
                                         <img src={logo} alt="company logo" className="logo__img img-fluid"/>
                                     </Link>
                                 </div>
                             </div>        
-                            <div className="col-xs-12  col-sm-4 col-md-5 offset-lg-1 order-3 order-xs-3">
+                            <div className="col-xs-12  col-sm-4 col-md-5 offset-lg-1  order-sm-2 order-3">
                                 <form action="#" className="search">
                                     <div className="input-group">
                                         <input type="text" className="form-control" placeholder="Search"/>
@@ -31,7 +31,7 @@ export default class Header extends React.Component {
                                     </div>
                                 </form> 
                             </div>
-                            <div className="col-7 col-sm-6 col-md-5 col-lg-3 offset-lg-1 order-2 order-xs-2">
+                            <div className="col-7 col-sm-6 col-md-5 col-lg-3 offset-lg-1 order-sm-3 order-2">
                                 <div class="widgets-wrap d-flex text-capitalize widget-header">
                                     <div class="header-nav d-flex">
                                         <li class="nav-text cc">OFFER</li>
@@ -40,7 +40,9 @@ export default class Header extends React.Component {
                                         </li>
                                         <li className="nav-cart">
                                             <span className="text-white position-absolute cart-count">0</span>
-                                            <a className="header-cart text-white"><FaShoppingCart/><span className="header-cart-text">Cart</span></a>
+                                            <Link to="/cart" className="header-cart text-white">
+                                                <FaShoppingCart/><span className="header-cart-text">Cart</span>
+                                            </Link>
                                         </li>
                                     </div>
                                 </div>
