@@ -84,12 +84,12 @@ export default class FeaturedProducts extends React.Component {
                         <div className="main-product mt-3">
                             <div className="mainpro-des border-bottom">
                                 <div className="row no-gutters">
-                                    <div className="col-8 bg-white py-3 px-md-0 px-3">
+                                    <div className="col-8 bg-white pt-3 px-md-0 px-3">
                                         <h4 className="pro-category text-capitalize">fresh arrival</h4>
-                                        <span className="pro-sub-category text-muted text-capitalize">men footwear</span>
+                                        {/* <span className="pro-sub-category text-muted text-capitalize">men footwear</span> */}
                                     </div>
                                     <div className="col-4 bg-white text-md-right text-center py-sm-3 py-0">
-                                        <Link to="/" className="btn btn-danger text-uppercase  my-3"> view all</Link>
+                                        <Link to="/" className="btn btn-danger text-uppercase"> view all</Link>
                                     </div>
                                 </div>
                             </div>
